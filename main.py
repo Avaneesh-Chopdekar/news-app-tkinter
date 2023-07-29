@@ -101,7 +101,7 @@ class NewsApp:
             text="Prev",
             width=11,
             height=3,
-            command=lambda: self.load_news_items(index - 1),
+            command=lambda: self.prev_command(index),
         )
         prevBtn.pack(side="left")
 
@@ -134,11 +134,10 @@ class NewsApp:
             text="Next",
             width=11,
             height=3,
-            command=lambda: self.load_news_items(index + 1),
+            command=lambda: self.next_command(index),
         )
         nextBtn.pack(side="left")
 
         self.root.mainloop()
-
 
 NewsApp()
